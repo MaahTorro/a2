@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Valor de Venda
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+
+    <ion-list-header> Calcule o valor final de venda: </ion-list-header>
+
+        <ion-item >
+          <ion-label>Valor inicial de venda</ion-label>
+          <ion-input type="number" [(ngModel)]="valorInicial"></ion-input>
+        </ion-item>
+
+
+      <ion-radio-group [(ngModel)]="radioSelecionada">
+
+        <ion-item>
+          <ion-label>Pix</ion-label>
+          <ion-radio value="option-1"></ion-radio>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label>Débito</ion-label>
+          <ion-radio value="option-2"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Crédito</ion-label>
+          <ion-radio value="option-3"></ion-radio>
+        </ion-item>
+
+
+      </ion-radio-group>
+    </ion-list>
+
+
+    <ion-button (click)="verificar()">Verificar</ion-button>
+
+    <ion-label>{{resultado}}</ion-label>
+</ion-content>
+
+
+
